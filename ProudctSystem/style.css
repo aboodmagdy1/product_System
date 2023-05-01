@@ -1,0 +1,166 @@
+:root
+{
+    /* outer i mean the body  /inner i mean the inputs */
+    --bg-black-outer :#222;
+    --bg-switch :#f7ef06;
+    --inner-switch:#232603;
+    --bg-black-inner :#131111;
+    --bg-black-inner-focus :#010000;
+    --text-black-outer :#fff;
+    --text-black-inner:#f5f3f3;
+    --btn-black:#18026a;
+    --total-on:rgb(65, 100, 14);
+    --total-off:#0c1ea8;
+    --btn-black-text :#fff;
+    --error-color:rgb(255, 0, 0);
+
+     
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body.sun 
+{
+    --bg-black-outer :rgb(210, 210, 210);
+    --bg-switch :#000000;
+    --inner-switch:#f2f2f2;
+    --bg-black-inner :#bac5c5;
+    --bg-black-inner-focus :#f8f9fb;
+    --text-black-outer :rgb(4, 7, 65);
+    --text-black-inner:#000000;
+    --btn-black:#172a66;
+    --total-on:rgb(147, 242, 4);
+    --total-off:#c1c1c1;
+    --error-color:rgb(234, 2, 2);
+}
+
+body
+{
+    background-color: var(--bg-black-outer);
+    color: var(--text-black-outer);
+    font-family: system-ui;
+}
+.system
+{
+    width: 80%;
+    margin: auto; 
+    
+}
+.system .head 
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin:10px 0 ;
+}
+/* end of header */
+/* start of inputs */
+ input
+{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background:var(--bg-black-inner);
+    margin: 4px 0px;
+    border-radius:10px;
+    padding: 4px;
+    color: var(--text-black-inner);
+}
+ input:focus
+{
+background: var(--bg-black-inner-focus);
+transform:scale(1.1);
+} 
+.price input
+{
+    width: 20%;
+}
+#total
+{
+    background:#0c1ea8;
+    padding: 5px 2px;
+    border-radius: 4px;
+}
+#total::before
+{
+    content: "Total : ";
+}
+#deleteAll
+{
+    margin: 10px 0;
+}
+
+
+button
+{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background: var(--btn-black);
+    color: #ffffff;
+    border-radius:20px;
+    transition:0.5s ;
+}
+button:hover
+{
+    background: #040c9f;
+    letter-spacing: 1px;
+}
+/* end of inputs */
+
+/* start of outputs  */
+.searchBtn
+{
+    display: flex;
+    justify-content: space-between;
+}
+.searchBtn  button
+{
+    width: 48%;
+}
+table
+{
+    width: 100%;
+    text-align: center;
+    margin:10px 0px; 
+}
+table th
+{
+    text-transform: uppercase;
+    
+}
+th,td
+{
+    padding:5px;
+}
+/* end of outputs */
+
+.day-night
+{
+    position: fixed;
+    top: 20px;
+    right: 4px;
+    padding: 15px;
+    width: 40px;
+    border:1px solid  var(--bg-switch);
+    background:  var(--bg-switch);
+    color: var(--inner-switch);
+    z-index:101 ;
+    border-radius:20px ;
+    transition: all .3s ease;
+    cursor:pointer;
+    font-size:25px;
+    text-align: center;
+}
+
+.fas
+{
+    position: relative;
+    right: 100%;
+    border-radius: 50%;
+    font-size: 25px;
+}
